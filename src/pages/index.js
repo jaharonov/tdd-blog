@@ -46,9 +46,7 @@ class IndexPage extends React.Component {
             )
           })}
         </div>
-        <Link to="/">
-          <Button marginTop="85px">Blog Home</Button>
-        </Link>
+        
       </Layout>
     )
   }

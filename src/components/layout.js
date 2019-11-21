@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import Button from "../components/button"
 import { rhythm, scale } from "../utils/typography"
-import { red } from "ansi-colors";
+
 
 class Layout extends React.Component {
   render() {
@@ -46,9 +46,9 @@ class Layout extends React.Component {
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              color: `#a9a9a9`,
             }}
-            to={location.pathname === blogPath ? `` : `/`}
+            to={`/blog/`}
           >
             {title}
           </Link>
@@ -67,11 +67,20 @@ class Layout extends React.Component {
         >
           <header>{header}</header>
           <main>{children}</main>
+          <Button>
+          <a 
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `#a9a9a9`,
+            }}
+          href="https://www.tapdancedetroit.org">Tap Dance Detroit</a>
+          </Button>
         </div>
         <Footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          Denise Caston-Clark
         </Footer>
       </Wrapper>
     )
