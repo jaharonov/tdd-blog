@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Kyle Matthews`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
+    title: `Tap Dance Detroit Blog`,
+    author: `Denise Caston-Clark`,
+    description: `The Tap Dance Detroit Blog`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    // social: {
+    //   twitter: `kylemathews`,
+    // },
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,

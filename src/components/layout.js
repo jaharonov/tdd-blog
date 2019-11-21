@@ -3,12 +3,13 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
+import { red } from "ansi-colors";
 
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
+    const blogPath = `${__PATH_PREFIX__}/`
     let header
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
@@ -18,6 +19,7 @@ class Layout extends React.Component {
             ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            color:`#ff3333`,
           }}
         >
           <Link
@@ -26,7 +28,7 @@ class Layout extends React.Component {
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={location.pathname === blogPath ? `/blog/` : `/`}
+            to={location.pathname === blogPath ? `` : `/`}
           >
             {title}
           </Link>
@@ -46,7 +48,7 @@ class Layout extends React.Component {
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={`/blog/`}
+            to={location.pathname === blogPath ? `` : `/`}
           >
             {title}
           </Link>
